@@ -1,0 +1,35 @@
+@import "vars";
+
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/bootstrap-reboot";
+
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/buttons";
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/utilities";
+
+// body {
+//     font-family: Helvetica,Arial,sans-serif;
+//     font-size: 26px;
+//     overflow-y: scroll;
+//     overflow-x: auto;
+//     cursor: default;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// body {
+// font-family: Philosopher,Arial;
+// font-weight: 700!important;
+// font-style: normal!important;
+// font-size: 40px!important;
+// line-height: 140%!important;
+// letter-spacing: 0px!important;
+// }
+
+.w-40{
+    width: 40%;
+}
