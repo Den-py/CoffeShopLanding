@@ -133,7 +133,7 @@
             <a id="whyChooseUs" href=""></a>
             <div class="p-5">
                 <div class="justify-content-center">
-                    <h2 class="text-center">
+                    <h2 class="text-center mb-4">
                         <span>Почему мы?</span>
                     </h2>
                     <div class="row justify-content-center">
@@ -182,13 +182,15 @@
                     <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Эспрессо">
                     <div class="card-body">
                         <h4 class="card-title border-primary border-2 border-bottom p-2">Эспрессо</h4>
-                        <p class="card-text ">30 мл горячей воды пропускаем под высоким давлением через фильтр с 7 г кофе.
-                            Получается небольшая бодрящая порция: можно пить так или использовать для приготовления других
+                        <p class="card-text ">30 мл горячей воды пропускаем под высоким давлением через фильтр с 7 г
+                            кофе.
+                            Получается небольшая бодрящая порция: можно пить так или использовать для приготовления
+                            других
                             напитков. </p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-bs-whatever="@mdo">Заказать</button>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-bs-whatever="@mdo">Подробнее >></button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Заказать</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Подробнее >></button>
                     </div>
                 </div>
             </div>
@@ -203,17 +205,104 @@
     № Интересные факты о кофе (Слайдеры ??)
 
     № Карусель отзывов
-    
-    
+    <section>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-xl-8 text-center mb-4">
+            <h3 class="mb-4 text-primary">Отзывы клиентов</h3>
+          </div>
+        </div>
+      
+        <div class="row text-center justify-content-around">
+          <div class="col-md-3 mb-0 bg-dark rounded">
+            <div class="d-flex justify-content-center my-4">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                class="rounded-circle shadow-1-strong" width="150" height="150" />
+            </div>
+            <h5 class="mb-3">Максим Игорехин</h5>
+            <h6 class="text-primary mb-3">Marketing Specialist</h6>
+            <h5>Лучший сервис, который мы видели</h5>
+            <p class="px-xl-3">
+              <i class="fas fa-quote-left pe-2">
+                
+              </i>
+              Менеджеры очень отзывчивые и помогают решить практически любой вопрос, всегда на связи и быстро отвечают. Понравилось человеческое отношение ко мне и к решению моей проблемы.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center mb-0">
+              <li>
+                <i class="fas bs-star fa-sm text-warning"></i>
+              </li>
+              <li>
+                <i class="fas bs-star fa-sm text-warning"></i>
+              </li>
+              <li>
+                <i class="fas bs-star fa-sm text-warning"></i>
+              </li>
+              <li>
+                <i class="fas bs-star fa-sm text-warning"></i>
+              </li>
+              <li>
+                <i class="far bs-star fa-sm text-warning"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    <div class="row justify-content-md-center align-items-center text-info">
+        <!-- TODO: ИЗМЕНИТЬ ПРИ ДОБАВЛЕНИИ ОПИСАНИЯ -->
+        <div style="margin-top: 25vh; padding-top: 5vh;" class="card col-md-5 bg-dark">
+            <div class="row  align-items-end" >
+                <img src="/assets/images/espresso.jpeg" alt="" class="col-md-4">
+
+                <div class="col">
+                    <div class="row">
+                        <p>Имя: <?php echo $_POST["user_fio"]; ?></p>
+                    </div>
+
+                    <div class="row">
+                        <p>Номер клубной карты: <?php echo $_POST["user_card"]; ?> </p>
+                    </div>
+
+                    <div class="row">
+                        <p>e-mail <a class="badge bg-secondary link-light text-decoration-none" href="mailto:<?php echo $_POST["user_mail"] ; ?>"><?php echo $_POST["user_mail"] ; ?></a></p>
+                    </div>
+
+                    <div class="row">
+                        <p class="speech bubble rounded bg-secondary">Пол: hskugh,kUSGk,AGvjkgABVJh,kAGJV nVcgvngvemjgcvnavajgev </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-body col-md">
+
+                <div class="row">
+                    <div class="col">
+                        <p>Вы выбрали план тренеровок:
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class='badge bg-danger'>Вы не выбрали дни занятий!</p>                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 
     № Карта
-    <div style="position:relative;overflow:hidden;"><a
-            href="https://yandex.ru/maps/2/saint-petersburg/search/Baggins%20Coffee/?utm_medium=mapframe&utm_source=maps"
-            style="color:#eee;font-size:12px;position:absolute;top:0px;">Baggins Coffee в Санкт‑Петербурге</a><a
-            href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-            style="color:#eee;font-size:12px;position:absolute;top:14px;">Санкт‑Петербург</a><iframe
+    <div style="position:relative;overflow:hidden;">
+        
+        <a href="https://yandex.ru/maps/2/saint-petersburg/search/Baggins%20Coffee/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Baggins Coffee в Санкт‑Петербурге</a>
+        <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Санкт‑Петербург</a>
+        <iframe
             src="https://yandex.ru/map-widget/v1/?display-text=Baggins%20Coffee&from=tabbar&ll=30.270754%2C59.910423&mode=search&sctx=ZAAAAAgBEAAaKAoSCbw%2F3qtWSj5AEX2R0JZz901AEhIJEvjDz38P9j8RLqnaboJv2z8iBgABAgMEBSgKOABAAkgBYityZWFycj1zY2hlbWVfTG9jYWwvR2VvL0VuYWJsZUJlYXV0eUZpbHRlcj0xagJydZ0BzcxMPaABAKgBAL0BniSqvcIBkgHRx8znxAb%2Blam27AH766n%2FrwTa4d2G4wLPyMnNBqbshNPbBN7bjPWPBPCits2IBfro7prvBLHz99If3YC1rvYDkP2ZtbAE0bKj38MD4r3x%2BvcBh5n%2B1I4EwY2MtQbTttjKjgHa492n9QSnhY7TBp%2BRvtuAAre%2BwZyMA9GikIbqBZGe9%2B2sAdaTsPPVArqWnMTyBeoBAPIBAPgBAIICGygoY2hhaW5faWQ6KDIyNzI5NTgzMzI3MikpKYoCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=30.270754%2C59.910423&source=serp_navig&sspn=0.579707%2C0.180362&text=%7B%22text%22%3A%22Baggins%20Coffee%22%2C%22what%22%3A%5B%7B%22attr_name%22%3A%22chain_id%22%2C%22attr_values%22%3A%5B%22227295833272%22%5D%7D%5D%7D&z=11.25"
-            width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
     +МБ форма (например рассылка)
     № Заголовок
 
