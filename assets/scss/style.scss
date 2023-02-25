@@ -38,6 +38,16 @@ img.card-img-top {
     border-radius: 25px;
 }
 
+.stoks {
+    transform: translate(0, -200%);
+}
+
+.img-stoks{
+    background-image: url("/assets/f(8).jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
 .carousel-fade .carousel-item {
     opacity: .2;
     transition-duration: .6s;
