@@ -48,10 +48,10 @@
                         <a class="nav-link" href="#products">Кофе</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="#">Отзывы</a>
+                        <a class="nav-link" href="#reviews">Отзывы</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link">Карта</a>
+                        <a class="nav-link" href="#map">Карта</a>
                     </li>
                 </ul>
             </div>
@@ -64,8 +64,8 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="img-stoks row align-items-center">
-                    <div class="col-8"></div>
-                    <div class="col-4">
+                    <div class="col-7"></div>
+                    <div class="col-3">
                         <h1>Любимый кофе с собой со скидкой — 20%!</h1>
                         <p>Отличный, бодрящий и безумно ароматный кофе ждёт вас каждый день с 8:00 до 23:00</p>
                         <p>Без перерывов и выходных</p>
@@ -76,7 +76,7 @@
             <div class="carousel-item">
                 <div class="img-stoks row align-items-center">
                     <div class="col-2"></div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <h1>Любимый кофе с собой со скидкой — 20%!</h1>
                         <p>Отличный, бодрящий и безумно ароматный кофе ждёт вас каждый день с 8:00 до 23:00</p>
                         <p>Без перерывов и выходных</p>
@@ -97,11 +97,11 @@
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <div class="p-3 bg-primary rounded d-flex justify-content-center"><div class="carousel-control-prev-icon" aria-hidden="true"></div></div>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <div class="p-3 bg-primary rounded d-flex justify-content-center"><div  class="carousel-control-next-icon" aria-hidden="true"></div>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -130,7 +130,7 @@
         </div> -->
         <!-- № Почему Мы? (Текст и три пункта) -->
         <div class="row container">
-            <a id="whyChooseUs" href=""></a>
+            <a id="whyChooseUs" href="" class="p-3 m-5"></a>
             <div class="p-5">
                 <div class="justify-content-center">
                     <h2 class="text-center mb-4">
@@ -175,9 +175,9 @@
                     </div>
                 </div>
             </div>
-            <a href="" id="products"></a>
+            <a href="" id="products" class="p-3 m-5"></a>
             <h2 class="text-primary text-center">Наши продукты</h2>
-            <div class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-center g-2">
+            <div class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-center g-2 bg-light">
                 <div class="card col-lg-3 col-8 m-3 p-0">
                     <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Эспрессо">
                     <div class="card-body">
@@ -194,115 +194,86 @@
                     </div>
                 </div>
             </div>
+            <a href="" id="reviews" class="p-3 m-5"></a>
+            <section>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-10 col-xl-8 text-center mb-4">
+                    <h3 class="mb-4 text-primary">Отзывы клиентов</h3>
+                  </div>
+                </div>
+              
+                <div class="row text-center justify-content-around">
+                  <div class="col-md-3 mb-0 bg-light rounded">
+                    <div class="d-flex justify-content-center my-4">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                    </div>
+                    <h5 class="mb-3">Максим Игорехин</h5>
+                    <h6 class="text-primary mb-3">Marketing Specialist</h6>
+                    <h5>Лучший сервис, который мы видели</h5>
+                    <p class="px-xl-3">
+                      <i class="fas fa-quote-left pe-2">
+                        
+                      </i>
+                      Менеджеры очень отзывчивые и помогают решить практически любой вопрос, всегда на связи и быстро отвечают. Понравилось человеческое отношение ко мне и к решению моей проблемы.
+                    </p>
+                    <ul class="list-unstyled d-flex justify-content-center mb-0">
+                      <li>
+                        <i class="fas bs-star fa-sm text-primary"></i>
+                      </li>
+                      <li>
+                        <i class="fas bs-star fa-sm text-primary"></i>
+                      </li>
+                      <li>
+                        <i class="fas bs-star fa-sm text-primary"></i>
+                      </li>
+                      <li>
+                        <i class="fas bs-star fa-sm text-primary"></i>
+                      </li>
+                      <li>
+                        <i class="far bs-star fa-sm text-primary"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </section>
+            
+            
+           </div>
         </div>
 
     </div>
     <footer>
-
+        <a href="" id="map" class="p-3 m-5"></a>
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="img-fluid rounded-start" style="position:relative;overflow:hidden;">
+    
+                    <a href="https://yandex.ru/maps/2/saint-petersburg/search/Baggins%20Coffee/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Baggins Coffee в Санкт‑Петербурге</a>
+                    <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Санкт‑Петербург</a>
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?display-text=Baggins%20Coffee&from=tabbar&ll=30.270754%2C59.910423&mode=search&sctx=ZAAAAAgBEAAaKAoSCbw%2F3qtWSj5AEX2R0JZz901AEhIJEvjDz38P9j8RLqnaboJv2z8iBgABAgMEBSgKOABAAkgBYityZWFycj1zY2hlbWVfTG9jYWwvR2VvL0VuYWJsZUJlYXV0eUZpbHRlcj0xagJydZ0BzcxMPaABAKgBAL0BniSqvcIBkgHRx8znxAb%2Blam27AH766n%2FrwTa4d2G4wLPyMnNBqbshNPbBN7bjPWPBPCits2IBfro7prvBLHz99If3YC1rvYDkP2ZtbAE0bKj38MD4r3x%2BvcBh5n%2B1I4EwY2MtQbTttjKjgHa492n9QSnhY7TBp%2BRvtuAAre%2BwZyMA9GikIbqBZGe9%2B2sAdaTsPPVArqWnMTyBeoBAPIBAPgBAIICGygoY2hhaW5faWQ6KDIyNzI5NTgzMzI3MikpKYoCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=30.270754%2C59.910423&source=serp_navig&sspn=0.579707%2C0.180362&text=%7B%22text%22%3A%22Baggins%20Coffee%22%2C%22what%22%3A%5B%7B%22attr_name%22%3A%22chain_id%22%2C%22attr_values%22%3A%5B%22227295833272%22%5D%7D%5D%7D&z=11.25"
+                        width="800" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-body bg-light m-4 rounded ">
+                  <h3 class="card-title ">Контакты</h3>
+                  <p class="card-text"><strong>Телефон:</strong> +7 999 555 55 55</p>
+                  <p class="card-text"><strong>Email:</strong> mycoffee@mycoffeeshop.us</p>
+                  <p class="card-text"><strong>Адрес:</strong> Санкт-Петербург, Московский проспект, 73, корп. 5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+       <div class="rounded bg-light">
     </footer>
 
-
-    № Интересные факты о кофе (Слайдеры ??)
-
-    № Карусель отзывов
-    <section>
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-10 col-xl-8 text-center mb-4">
-            <h3 class="mb-4 text-primary">Отзывы клиентов</h3>
-          </div>
-        </div>
-      
-        <div class="row text-center justify-content-around">
-          <div class="col-md-3 mb-0 bg-dark rounded">
-            <div class="d-flex justify-content-center my-4">
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
-                class="rounded-circle shadow-1-strong" width="150" height="150" />
-            </div>
-            <h5 class="mb-3">Максим Игорехин</h5>
-            <h6 class="text-primary mb-3">Marketing Specialist</h6>
-            <h5>Лучший сервис, который мы видели</h5>
-            <p class="px-xl-3">
-              <i class="fas fa-quote-left pe-2">
-                
-              </i>
-              Менеджеры очень отзывчивые и помогают решить практически любой вопрос, всегда на связи и быстро отвечают. Понравилось человеческое отношение ко мне и к решению моей проблемы.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center mb-0">
-              <li>
-                <i class="fas bs-star fa-sm text-warning"></i>
-              </li>
-              <li>
-                <i class="fas bs-star fa-sm text-warning"></i>
-              </li>
-              <li>
-                <i class="fas bs-star fa-sm text-warning"></i>
-              </li>
-              <li>
-                <i class="fas bs-star fa-sm text-warning"></i>
-              </li>
-              <li>
-                <i class="far bs-star fa-sm text-warning"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    <div class="row justify-content-md-center align-items-center text-info">
-        <!-- TODO: ИЗМЕНИТЬ ПРИ ДОБАВЛЕНИИ ОПИСАНИЯ -->
-        <div style="margin-top: 25vh; padding-top: 5vh;" class="card col-md-5 bg-dark">
-            <div class="row  align-items-end" >
-                <img src="/assets/images/espresso.jpeg" alt="" class="col-md-4">
-
-                <div class="col">
-                    <div class="row">
-                        <p>Имя: <?php echo $_POST["user_fio"]; ?></p>
-                    </div>
-
-                    <div class="row">
-                        <p>Номер клубной карты: <?php echo $_POST["user_card"]; ?> </p>
-                    </div>
-
-                    <div class="row">
-                        <p>e-mail <a class="badge bg-secondary link-light text-decoration-none" href="mailto:<?php echo $_POST["user_mail"] ; ?>"><?php echo $_POST["user_mail"] ; ?></a></p>
-                    </div>
-
-                    <div class="row">
-                        <p class="speech bubble rounded bg-secondary">Пол: hskugh,kUSGk,AGvjkgABVJh,kAGJV nVcgvngvemjgcvnavajgev </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="card-body col-md">
-
-                <div class="row">
-                    <div class="col">
-                        <p>Вы выбрали план тренеровок:
-                        </p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <p class='badge bg-danger'>Вы не выбрали дни занятий!</p>                    
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
     № Карта
-    <div style="position:relative;overflow:hidden;">
-        
-        <a href="https://yandex.ru/maps/2/saint-petersburg/search/Baggins%20Coffee/?utm_medium=mapframe&utm_source=maps"
-            style="color:#eee;font-size:12px;position:absolute;top:0px;">Baggins Coffee в Санкт‑Петербурге</a>
-        <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-            style="color:#eee;font-size:12px;position:absolute;top:14px;">Санкт‑Петербург</a>
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?display-text=Baggins%20Coffee&from=tabbar&ll=30.270754%2C59.910423&mode=search&sctx=ZAAAAAgBEAAaKAoSCbw%2F3qtWSj5AEX2R0JZz901AEhIJEvjDz38P9j8RLqnaboJv2z8iBgABAgMEBSgKOABAAkgBYityZWFycj1zY2hlbWVfTG9jYWwvR2VvL0VuYWJsZUJlYXV0eUZpbHRlcj0xagJydZ0BzcxMPaABAKgBAL0BniSqvcIBkgHRx8znxAb%2Blam27AH766n%2FrwTa4d2G4wLPyMnNBqbshNPbBN7bjPWPBPCits2IBfro7prvBLHz99If3YC1rvYDkP2ZtbAE0bKj38MD4r3x%2BvcBh5n%2B1I4EwY2MtQbTttjKjgHa492n9QSnhY7TBp%2BRvtuAAre%2BwZyMA9GikIbqBZGe9%2B2sAdaTsPPVArqWnMTyBeoBAPIBAPgBAIICGygoY2hhaW5faWQ6KDIyNzI5NTgzMzI3MikpKYoCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=30.270754%2C59.910423&source=serp_navig&sspn=0.579707%2C0.180362&text=%7B%22text%22%3A%22Baggins%20Coffee%22%2C%22what%22%3A%5B%7B%22attr_name%22%3A%22chain_id%22%2C%22attr_values%22%3A%5B%22227295833272%22%5D%7D%5D%7D&z=11.25"
-            width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-    </div>
+   
     +МБ форма (например рассылка)
     № Заголовок
 
