@@ -148,6 +148,58 @@
 
     </div>
   </div>
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card text-start">
+            <img class="card-img-top" src="/assets/f(8).jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-title">Эспрессо</h4>
+              <p class="card-text">Body</p>
+              <div class="" data-bs-toggle="buttons">
+                <input type="radio" class="btn-check" name="options-outlined" id="250ml" autocomplete="off"
+                  checked>
+                <label class="btn btn-outline-primary" for="250ml">Checked success radio</label>
+    
+                <input type="radio" class="btn-check" name="options-outlined" id="500ml" autocomplete="off">
+                <label class="btn btn-outline-primary" for="500ml">Danger radio</label>
+              </div>
+              <div class="row">
+                
+                <button class="btn rounded-circle btn-outline-dark col">+</button>
+                <p class="col">1</p>
+                <button class="btn rounded-circle btn-outline-dark col">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть второе модальное окно</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel2">Модалка 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Скройте это модальное окно и покажите первое с помощью кнопки ниже.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Вернуться к первому</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Открыть первое модальное окно</a>
 </body>
 
 </html>
