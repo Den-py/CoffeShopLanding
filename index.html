@@ -171,7 +171,7 @@
                                 других
                                 напитков. </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Заказать</button>
+                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
 
                         </div>
                     </div>
@@ -185,7 +185,7 @@
                                 взбитую молочную пенку.
                             </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Заказать</button>
+                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
 
                         </div>
                     </div>
@@ -197,7 +197,7 @@
                                 горечи. Американо — достаточно легкий. Для его приготовления нужно
                                 сварить порцию эспрессо, а потом добавить в него 90 мл воды. </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Заказать</button>
+                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
 
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                             </ul>
                             </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Заказать</button>
+                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
 
                         </div>
                     </div>
@@ -228,7 +228,7 @@
                                 других
                                 напитков. </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Заказать</button>
+                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
 
                         </div>
                     </div>
@@ -380,6 +380,49 @@
                 }
             });
         });
+        function  toCoffeSettings() {
+            var button = this.relatedTarget
+            // Извлечь информацию из атрибутов data-bs- *
+            var recipient = button.getAttribute('data-bs-type')
+            // При необходимости вы можете инициировать запрос AJAX здесь
+            // а затем выполните обновление в обратном вызове.
+            //
+            // Обновите содержимое модального окна.
+            var settingsModal = document.querySelector('#coffeSettings');
+            var coffeName = settingsModal.querySelector('.card-title')
+            var coffeeInput = settingsModal.querySelector('input#coffeeInputType');
+            var title;
+            console.log(coffeName);
+            switch (coffeName) {
+                case 'espresso':
+                    title = 'Эспрессо';
+                    break;
+                case 'cappuccino':
+                    title = 'Капучино';
+                    break;
+                case 'americano':
+                    title = 'Американо';
+                    break;
+                case 'mocha':
+                    title = 'Мокко';
+                    break;
+                case 'romano':
+                    title = 'Романо';
+                    break;
+                case 'irish':
+                    title = 'Айриш';
+                    break;
+                case 'frappe':
+                    title = 'Фраппе';
+                    break;
+
+            }
+            coffeName.textContent = title;
+            coffeeInput.value = coffeName
+        }
+        document.querySelectorAll('coffee').forEach(drink => {
+            drink.click(toCoffeSettings())
+        })
     </script>
 
     <div id="shopingCartModal" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
@@ -431,64 +474,64 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel2">Модалка 2</h5>
+                    <h5 class="modal-title" id="chooseModalToggleLabel2">Модалка 2</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div
                         class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-center g-1 ">
-                        <div class="card col-lg-4 col-8 m-3 p-0">
+                        <div class="card card-btn col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="espresso">
                             <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
                                 alt="Эспрессо">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Эспрессо</h4>
                             </div>
                         </div>
-                        <div class="card col-lg-4 col-8 m-3 p-0">
+                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="cappuccino">
                             <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
                                 alt="Капучино">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Капучино</h4>
                             </div>
                         </div>
-                        <div class="card col-lg-4 col-8 m-3 p-0">
+                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="americano">
                             <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
                                 alt="Американо">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Американо</h4>
                             </div>
                         </div>
-                        <div class="card col-lg-4 col-8 m-3 p-0">
+                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="mocha">
                             <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Мокко">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Мокко</h4>
                             </div>
                         </div>
-                        <div class="card col-lg-4 col-8 m-3 p-0">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
-                                alt="Эспрессо">
+                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="romano">
+                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Романо">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Романо</h4>
                             </div>
                         </div>
-                        <div class="card col-lg-4 col-8 m-3 p-0">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
-                                alt="Эспрессо">
+                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="irish">
+                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Айриш">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Айриш</h4>
                             </div>
                         </div>
-                        <div class="card col-lg-4 col-8 m-3 p-0">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
-                                alt="Эспрессо">
+                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
+                            data-bs-target="#coffeSettings" data-bs-type="frappe">
+                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Фраппе">
                             <div class="card-body">
                                 <h4 class="card-title border-primary border-2 border-bottom p-2">Фраппе</h4>
                             </div>
                         </div>
-
-
-
-                       
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -520,15 +563,105 @@
                                 <label class="btn btn-outline-primary" for="500-ml">Danger radio</label>
                             </div>
                         </div>
+                        <input type="hidden" name="" id="coffeeInputType">
+                        <input type="hidden" name="" id="coffeeInputVolume">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                    <button class="btn btn-primary" data-bs-target="#chooseModalToggle2" data-bs-toggle="modal"
                         data-bs-dismiss="modal">Открыть второе модальное окно</button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var chooseModal = document.querySelectorAll('#coffeChooseListModal .card-btn')
+        
+        chooseModal.forEach(card => {
+            card.addEventListener('click', function (event) {
+            // Кнопка, запускающая модальное окно
+            var button = this.relatedTarget;
+            console.log(this);
+            // Извлечь информацию из атрибутов data-bs- *
+            var coffeName = this.getAttribute('data-bs-type');
+            // При необходимости вы можете инициировать запрос AJAX здесь
+            // а затем выполните обновление в обратном вызове.
+            //
+            // Обновите содержимое модального окна.
+            var settingsModal = document.querySelector('#coffeSettings');
+            var coffeInputName = settingsModal.querySelector('.card-title');
+            var coffeeInput = settingsModal.querySelector('input#coffeeInputType');
+            var title;
+            console.log(coffeName);
+            switch (coffeName) {
+                case 'espresso':
+                    title = 'Эспрессо';
+                    break;
+                case 'cappuccino':
+                    title = 'Капучино';
+                    break;
+                case 'americano':
+                    title = 'Американо';
+                    break;
+                case 'mocha':
+                    title = 'Мокко';
+                    break;
+                case 'romano':
+                    title = 'Романо';
+                    break;
+                case 'irish':
+                    title = 'Айриш';
+                    break;
+                case 'frappe':
+                    title = 'Фраппе';
+                    break;
+            }
+            coffeInputName.textContent = title;
+            coffeeInput.value = coffeName
+        });
+        });
+        chooseModal.addEventListener('click', function (event) {
+            // Кнопка, запускающая модальное окно
+            var button = event.relatedTarget
+            // Извлечь информацию из атрибутов data-bs- *
+            var recipient = button.getAttribute('data-bs-type')
+            // При необходимости вы можете инициировать запрос AJAX здесь
+            // а затем выполните обновление в обратном вызове.
+            //
+            // Обновите содержимое модального окна.
+            var settingsModal = document.querySelector('#coffeSettings');
+            var coffeName = settingsModal.querySelector('.card-title')
+            var coffeeInput = settingsModal.querySelector('input#coffeeInputType');
+            var title;
+            console.log(coffeName);
+            switch (coffeName) {
+                case 'espresso':
+                    title = 'Эспрессо';
+                    break;
+                case 'cappuccino':
+                    title = 'Капучино';
+                    break;
+                case 'americano':
+                    title = 'Американо';
+                    break;
+                case 'mocha':
+                    title = 'Мокко';
+                    break;
+                case 'romano':
+                    title = 'Романо';
+                    break;
+                case 'irish':
+                    title = 'Айриш';
+                    break;
+                case 'frappe':
+                    title = 'Фраппе';
+                    break;
+
+            }
+            coffeName.textContent = title;
+            coffeeInput.value = coffeName
+        });
+    </script>
 </body>
 
 </html>
