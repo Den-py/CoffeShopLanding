@@ -6,12 +6,20 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-.stars {
-  height: 5%;
+.btn-circle {
+  border: 0px solid rgb(255, 255, 255);
 }
 
-.w-40 {
-  width: 40%;
+.btn-circle:hover {
+  border: 0px solid black;
+}
+
+.btn-circle:focus {
+  border: 0px solid black;
+}
+
+.stars {
+  height: 5%;
 }
 
 img.card-img-top {
@@ -30,9 +38,11 @@ img.card-img-top {
 
 .glass {
   /* other styles */
-  background: rgba(255, 255, 255, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px) saturate(178%);
+  -webkit-backdrop-filter: blur(6px) saturate(178%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
 #sectionRewies {
@@ -7735,8 +7745,20 @@ textarea.form-control-lg {
   --bs-border-opacity: 1;
 }
 
+.w-5 {
+  width: 5% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
 .w-25 {
   width: 25% !important;
+}
+
+.w-40 {
+  width: 40% !important;
 }
 
 .w-50 {
