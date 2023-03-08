@@ -11,12 +11,164 @@
     <title>Document</title>
 </head>
 <style>
-
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 </style>
 
-<body class="">
+<body>
+    <section>
+        <div id="shopingCartModal" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h4 class="modal-title">Ваш список заказа</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row d-flex justify-content-center ">
+                            <div id="coffeeList" class="d-flex justify-content-start flex-column">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer flex-column">
+                        <div class="row">
+                            <div class="d-flex justify-content-center ">
+                                <button type="button" class="btn btn-primary btn-lg col-lg-3  col-sm-2"
+                                    data-bs-target="#coffeChooseListModal" data-bs-toggle="modal"
+                                    data-bs-dismiss="modal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-plus-lg ratio ratio-1x1" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button type="submit" class="btn btn-primery">Заказать</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="coffeChooseListModal" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="chooseModalToggleLabel2">Список доступных напитков</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div
+                            class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-center g-1 ">
+                            <div class="card coffee-btn card-btn col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="espresso">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
+                                    alt="Эспрессо">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Эспрессо</h4>
+                                </div>
+                            </div>
+                            <div class="coffee-btn card-btn card col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="cappuccino">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/cappuccino.jpeg"
+                                    alt="Капучино">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Капучино</h4>
+                                </div>
+                            </div>
+                            <div class="coffee-btn card-btn card col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="americano">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/americano.jpeg"
+                                    alt="Американо">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Американо</h4>
+                                </div>
+                            </div>
+                            <div class="coffee-btn card-btn card col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="mocha">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/mocha.jpeg" alt="Мокко">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Мокко</h4>
+                                </div>
+                            </div>
+                            <div class="coffee-btn card-btn card col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="romano">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/romano.jpeg"
+                                    alt="Романо">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Романо</h4>
+                                </div>
+                            </div>
+                            <div class="coffee-btn card-btn card col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="irish">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/irish.jpeg" alt="Айриш">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Айриш</h4>
+                                </div>
+                            </div>
+                            <div class="coffee-btn card-btn card col-lg-4 col-8 m-3 p-0" type="button"
+                                data-bs-toggle="modal" data-bs-target="#coffeSettings" data-bs-type="frappe">
+                                <img class="card-img-top img-fluid rounded" src="/assets/images/frappe.jpeg"
+                                    alt="Фраппе">
+                                <div class="card-body">
+                                    <h4 class="card-title border-primary border-2 border-bottom p-2">Фраппе</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#coffeSettings" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Вернуться к первому</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="coffeSettings" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card text-start">
+                            <img class="card-img-top" src="/assets/f(8).jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Эспрессо</h4>
+                                <div class="" data-bs-toggle="buttons">
+                                    <input type="radio" class="btn-check" name="options-ml" id="250-ml" value="250"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="250-ml">250 мл</label>
+
+                                    <input type="radio" class="btn-check" name="options-ml" id="500-ml" value="500"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="500-ml">500 мл</label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="coffeeInputType" id="coffeeInputType">
+                            <input type="hidden" name="" id="coffeeInputVolume">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnAdd" class="btn btn-primary" data-bs-target="#shopingCartModal"
+                            data-bs-toggle="modal" data-bs-dismiss="modal">Добавть в заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="sectionStoks">
-        <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-2 bg-secondary">
+        <div>
+
+        </div>
+        <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-2 m-0 bg-secondary">
             <div class="container-fluid">
                 <div class="d-flex justify-content-center mx-auto w-40">
                     <a href="" class="navbar-brand ">
@@ -58,35 +210,38 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="img-stoks row align-items-center">
+                    <div class="img-stoks-1 row align-items-center">
                         <div class="col-7"></div>
                         <div class="glass col-3 p-4 rounded">
                             <h1>Любимый кофе с собой со скидкой — 20%!</h1>
                             <p>Отличный, бодрящий и безумно ароматный кофе ждёт вас каждый день с 8:00 до 23:00</p>
                             <p>Без перерывов и выходных</p>
-                            <button class="btn btn-primary">Сделать заказ</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" href="#shopingCartModal">Сделать
+                                заказ</button>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="img-stoks row align-items-center">
+                    <div class="img-stoks-2 row align-items-center">
                         <div class="col-2"></div>
                         <div class="glass col-3 p-4 rounded">
                             <h1>Любимый кофе с собой со скидкой — 20%!</h1>
                             <p>Отличный, бодрящий и безумно ароматный кофе ждёт вас каждый день с 8:00 до 23:00</p>
                             <p>Без перерывов и выходных</p>
-                            <button class="btn btn-primary">Сделать заказ</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" href="#shopingCartModal">Сделать
+                                заказ</button>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="img-stoks row align-items-center">
+                    <div class="img-stoks-3 row align-items-center">
                         <div class="col-4"></div>
                         <div class="glass col-4 p-4 rounded">
                             <h1>Любимый кофе с собой со скидкой — 20%!</h1>
                             <p>Отличный, бодрящий и безумно ароматный кофе ждёт вас каждый день с 8:00 до 23:00</p>
                             <p>Без перерывов и выходных</p>
-                            <button class="btn btn-primary">Сделать заказ</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" href="#shopingCartModal">Сделать
+                                заказ</button>
                         </div>
                     </div>
                 </div>
@@ -164,8 +319,8 @@
                 <p class="m-5"></p>
                 <h2 class="text-primary text-center p-5">Наши продукты</h2>
                 <div
-                    class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-center g-2 ">
-                    <div class="card col-lg-3 col-8 m-3 p-0">
+                    class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-stretch g-2 ">
+                    <div class="card col-lg-3 col-8 m-3 p-0 ">
                         <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Эспрессо">
                         <div class="card-body">
                             <h4 class="card-title border-primary border-2 border-bottom p-2">Эспрессо</h4>
@@ -174,13 +329,13 @@
                                 Получается небольшая бодрящая порция: можно пить так или использовать для приготовления
                                 других
                                 напитков. </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#coffeSettings"
+                                data-bs-type="espresso" class="coffee-btn btn btn-primary">Заказать</button>
 
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-8 m-3 p-0">
-                        <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Капучино">
+                    <div class="card col-lg-3 col-8 m-3 p-0 ">
+                        <img class="card-img-top img-fluid rounded" src="/assets/images/cappuccino.jpeg" alt="Капучино">
                         <div class="card-body">
                             <h4 class="card-title border-primary border-2 border-bottom p-2">Капучино</h4>
                             <p class="card-text ">
@@ -188,25 +343,25 @@
                                 заливают эспрессо. После этого добавляют порцию обычного молока, а сверху выкладывают
                                 взбитую молочную пенку.
                             </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
+                            <button type="button" class="coffee-btn btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#coffeSettings" data-bs-type="cappuccino">Заказать</button>
 
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-8 m-3 p-0">
-                        <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Американо">
+                    <div class="card col-lg-3 col-8 m-3 p-0 ">
+                        <img class="card-img-top img-fluid rounded" src="/assets/images/americano.jpeg" alt="Американо">
                         <div class="card-body">
                             <h4 class="card-title border-primary border-2 border-bottom p-2">Американо</h4>
                             <p class="card-text ">Обладает особой популярностью за счет отсутствия характерной кофейной
                                 горечи. Американо — достаточно легкий. Для его приготовления нужно
                                 сварить порцию эспрессо, а потом добавить в него 90 мл воды. </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
+                            <button type="button" class="coffee-btn btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#coffeSettings" data-bs-type="americano">Заказать</button>
 
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-8 m-3 p-0">
-                        <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Мокко">
+                    <div class="card col-lg-3 col-8 m-3 p-0 ">
+                        <img class="card-img-top img-fluid rounded" src="/assets/images/mocha.jpeg" alt="Мокко">
                         <div class="card-body">
                             <h4 class="card-title border-primary border-2 border-bottom p-2">Мокко</h4>
                             <p class="card-text ">
@@ -217,22 +372,21 @@
                                 <li>молоко</li>
                             </ul>
                             </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
+                            <button type="button" class="coffee-btn btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#coffeSettings" data-bs-type="mocha">Заказать</button>
 
                         </div>
                     </div>
-                    <div class="card col-lg-3 col-8 m-3 p-0">
-                        <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Эспрессо">
+                    <div class="card col-lg-3 col-8 m-3 p-0 ">
+                        <img class="card-img-top img-fluid rounded" src="/assets/images/frappe.jpeg" alt="Фраппе">
                         <div class="card-body">
-                            <h4 class="card-title border-primary border-2 border-bottom p-2">Эспрессо</h4>
-                            <p class="card-text ">30 мл горячей воды пропускаем под высоким давлением через фильтр с 7 г
-                                кофе.
-                                Получается небольшая бодрящая порция: можно пить так или использовать для приготовления
-                                других
-                                напитков. </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#chooseModal" data-bs-whatever="@mdo">Заказать</button>
+                            <h4 class="card-title border-primary border-2 border-bottom p-2">Фраппе</h4>
+                            <p class="card-text ">Фраппе – чёрный кофе с пенкой, взбитый со льдом. Существует множество
+                                рецептов, в напиток добавляют сахар, молоко, сливки, мороженое, ликёры, сиропы,
+                                пряности, даже кока-колу. Фраппе обязательно взбивают, этим он отличается от всех других
+                                разновидностей айс кофе. </p>
+                            <button type="button" class="coffee-btn btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#coffeSettings" data-bs-type="frappe">Заказать</button>
 
                         </div>
                     </div>
@@ -535,152 +689,9 @@
         })
     </script>
 
-    <div id="shopingCartModal" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <div class="col-4"></div>
-                    <h2 class="text-center modal-title">Ваш список заказа</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row d-flex justify-content-center ">
-                        <div id="coffeeList" class="d-flex justify-content-start flex-column">
-                            
-                        </div>
-                    </div>
 
-                </div>
-                <div class="modal-footer flex-column">
-                    <div class="row">
-                        <div class="d-flex justify-content-center ">
-                            <button type="button"
-                                class="btn btn-primary btn-lg col-lg-3  col-sm-2"
-                                data-bs-target="#coffeChooseListModal" data-bs-toggle="modal"
-                                data-bs-dismiss="modal">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    class="bi bi-plus-lg ratio ratio-1x1" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-primery">Заказать</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div id="coffeChooseListModal" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="chooseModalToggleLabel2">Модалка 2</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div
-                        class="d-flex flex-lg-row flex-column flex-lg-wrap justify-content-lg-around align-items-center g-1 ">
-                        <div class="card card-btn col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="espresso">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
-                                alt="Эспрессо">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Эспрессо</h4>
-                            </div>
-                        </div>
-                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="cappuccino">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
-                                alt="Капучино">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Капучино</h4>
-                            </div>
-                        </div>
-                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="americano">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg"
-                                alt="Американо">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Американо</h4>
-                            </div>
-                        </div>
-                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="mocha">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Мокко">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Мокко</h4>
-                            </div>
-                        </div>
-                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="romano">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Романо">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Романо</h4>
-                            </div>
-                        </div>
-                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="irish">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Айриш">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Айриш</h4>
-                            </div>
-                        </div>
-                        <div class="card-btn card col-lg-4 col-8 m-3 p-0" type="button" data-bs-toggle="modal"
-                            data-bs-target="#coffeSettings" data-bs-type="frappe">
-                            <img class="card-img-top img-fluid rounded" src="/assets/images/espresso.jpeg" alt="Фраппе">
-                            <div class="card-body">
-                                <h4 class="card-title border-primary border-2 border-bottom p-2">Фраппе</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#coffeSettings" data-bs-toggle="modal"
-                        data-bs-dismiss="modal">Вернуться к первому</button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div id="coffeSettings" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="card text-start">
-                        <img class="card-img-top" src="/assets/f(8).jpg" alt="Title">
-                        <div class="card-body">
-                            <h4 class="card-title">Эспрессо</h4>
-                            <p class="card-text">Body</p>
-                            <div class="" data-bs-toggle="buttons">
-                                <input type="radio" class="btn-check" name="options-ml" id="250-ml" value="250"
-                                    autocomplete="off" checked>
-                                <label class="btn btn-outline-primary" for="250-ml">250 мл</label>
-
-                                <input type="radio" class="btn-check" name="options-ml" id="500-ml" value="500"
-                                    autocomplete="off">
-                                <label class="btn btn-outline-primary" for="500-ml">500 мл</label>
-                            </div>
-                        </div>
-                        <input type="hidden" name="coffeeInputType" id="coffeeInputType">
-                        <input type="hidden" name="" id="coffeeInputVolume">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="btnAdd" class="btn btn-primary" data-bs-target="#shopingCartModal"
-                        data-bs-toggle="modal" data-bs-dismiss="modal">Добавть в заказ</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script>
-        var chooseModal = document.querySelectorAll('#coffeChooseListModal .card-btn')
+        var chooseModal = document.querySelectorAll('.coffee-btn')
 
         chooseModal.forEach(card => {
             card.addEventListener('click', function (event) {
@@ -696,6 +707,7 @@
                 var settingsModal = document.querySelector('#coffeSettings');
                 var coffeInputName = settingsModal.querySelector('.card-title');
                 var coffeeInput = settingsModal.querySelector('input#coffeeInputType');
+                var coffeeImg = settingsModal.querySelector('img');
                 var title;
                 console.log(coffeName);
                 switch (coffeName) {
@@ -723,6 +735,7 @@
                 }
                 coffeInputName.textContent = title;
                 coffeeInput.value = coffeName
+                coffeeImg.src = 'assets/images/' + coffeName + '.jpeg'
             });
         });
         // Ошибка, хотя работает...
@@ -776,50 +789,59 @@
             shopingCart.push({ title: modalNode.querySelector('h4').textContent, coffee: modalNode.querySelector('#coffeeInputType').value, ml: modalNode.querySelector('input[name="options-ml"]:checked').value, quantity: 1 });
             console.log(shopingCart);
         });
+        var btnPlusList = document.querySelectorAll('.btn-plus');
+        
         var myModalEl = document.getElementById('shopingCartModal');
-        myModalEl.addEventListener('show.bs.modal', function (event) {
-            // document.getElementById('coffeeLists').innerHTML = '';
+        console.log(myModalEl);
+        myModalEl.addEventListener('show.bs.modal', function (event) { console.log("работает!!");
+            // document.querySelector('#coffeeLists').innerHTML = "<li></li>";
+            // var div = document.getElementById('coffeeLists');
+            
+            // while (div.firstChild) {
+            //     div.removeChild(div.firstChild);
+            // }
             shopingCart.forEach(function (coffee) {
-                console.log(coffee);
-                
-                document.getElementById('coffeeList').insertAdjacentHTML
-                    ('afterbegin', `
+                console.log(coffee.title);
+
+                document.getElementById('coffeeList').insertAdjacentHTML('afterbegin', `
                 <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="/assets/images/espresso.jpeg" class="img-fluid rounded-start"
-                        alt="Card title">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body d-flex align-items-start">
-                        <h5 class="card-title mx-4">${coffee.title}</h5>
-                        <p class="card-text mx-4">${coffee.ml} мл</p>
-                        <div id="id-${coffee.coffee}" class="d-flex flex-fill justify-content-end align-items-center">
-                            <button type="button" class="btn-circle ratio ratio-1x1"><svg
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                </svg></button>
-                            <h4 class="mx-3">${coffee.quantity}</h4>
-                            <button class="btn-circle ratio ratio-1x1"><svg
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                </svg></button>
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/assets/images/${coffee.coffee}.jpeg" class="img-fluid rounded-start"
+                                alt="Card title">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex align-items-start">
+                                <h5 class="card-title mx-4">${coffee.title}</h5>
+                                <p class="card-text mx-4">${coffee.ml} мл</p>
+                                <div id="id-${coffee.coffee}" class="d-flex flex-fill justify-content-end align-items-center">
+                                    <button type="button" class="btn-plus btn-circle ratio ratio-1x1">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg></button>
+                                    <h4 class="mx-3">${coffee.quantity}</h4>
+                                    <button class="btn-minus btn-circle ratio ratio-1x1"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                        </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>`)
-            })
+                </div>`)
+            });
 
-        });
+        }, true);
 
 
 
