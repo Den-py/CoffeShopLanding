@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
+
     <title>Document</title>
 </head>
 <style>
@@ -157,8 +157,40 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button id="btnAdd" class="btn btn-primary" data-bs-target="#shopingCartModal"
+                        <button id="btnAdd" class="btn btn-primary" data-bs-target="#coffeMassage"
                             data-bs-toggle="modal" data-bs-dismiss="modal">Добавть в заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="coffeMassage" class="modal fade modal-lg " aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card text-start">
+                            <div class="d-flex justify-content-center  card-img-top">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-check-circle col-3 text-primary" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                </svg>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title text-primary">Напиток добавлен в список заказов!</h3>
+
+                            </div>
+                            <input type="hidden" name="coffeeInputType" id="coffeeInputType">
+                            <input type="hidden" name="" id="coffeeInputVolume">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#shopingCartModal" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Вернуться к списку заказов</button>
                     </div>
                 </div>
             </div>
@@ -782,24 +814,31 @@
         });
     </script>
     <script>
+        var myModalEl = (document.getElementById('shopingCartModal'));
+
         let shopingCart = [];
         document.getElementById("btnAdd").addEventListener('click', function (event) {
             console.log(this.parentElement.parentElement);
             let modalNode = this.parentElement.parentElement;
             shopingCart.push({ title: modalNode.querySelector('h4').textContent, coffee: modalNode.querySelector('#coffeeInputType').value, ml: modalNode.querySelector('input[name="options-ml"]:checked').value, quantity: 1 });
+
             console.log(shopingCart);
+            console.log(myModalEl);
+            // this.hidden();
+            myModalEl.toggle();
         });
         var btnPlusList = document.querySelectorAll('.btn-plus');
-        
-        var myModalEl = document.getElementById('shopingCartModal');
-        console.log(myModalEl);
-        myModalEl.addEventListener('show.bs.modal', function (event) { console.log("работает!!");
-            // document.querySelector('#coffeeLists').innerHTML = "<li></li>";
-            // var div = document.getElementById('coffeeLists');
-            
+
+
+        myModalEl.addEventListener('show.bs.modal', function (event) {
+            console.log("работает!!");
+            // 
+            // var div = document.getElementById('coffeeList');
+
             // while (div.firstChild) {
             //     div.removeChild(div.firstChild);
             // }
+            document.querySelector('#coffeeList').innerHTML = " ";
             shopingCart.forEach(function (coffee) {
                 console.log(coffee.title);
 
@@ -845,7 +884,10 @@
 
 
 
+
+
     </script>
+    <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
 </body>
 
 </html>
