@@ -34,19 +34,19 @@ img.card-img-top {
 }
 
 .img-stoks-1 {
-  background-image: url("/assets/images/promotion3.jpeg");
+  background-image: url("../images/promotion3.jpeg");
   background-size: cover;
   height: 100vh;
 }
 
 .img-stoks-2 {
-  background-image: url("/assets/images/promotion1.jpeg");
+  background-image: url("../images/promotion1.jpeg");
   background-size: cover;
   height: 100vh;
 }
 
 .img-stoks-3 {
-  background-image: url("/assets/images/promotion2.jpeg");
+  background-image: url("../images/promotion2.jpeg");
   background-size: cover;
   height: 100vh;
 }
@@ -61,7 +61,14 @@ img.card-img-top {
 }
 
 #sectionRewies {
-  background-image: url("/assets/f(8).jpg");
+  background-image: url("../images/coffe_list.jpg");
+  background-size: 70%;
+}
+
+#sectionProducts {
+  background-image: url("../images/728.jpg");
+  background-size: auto;
+  background-position: center;
 }
 
 :root,
@@ -95,7 +102,7 @@ img.card-img-top {
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
-  --bs-light: #F9CBFC;
+  --bs-light: #fff;
   --bs-dark: #212529;
   --bs-primary-rgb: 84, 146, 10;
   --bs-secondary-rgb: 55, 56, 56;
@@ -103,7 +110,7 @@ img.card-img-top {
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 249, 203, 252;
+  --bs-light-rgb: 255, 255, 255;
   --bs-dark-rgb: 33, 37, 41;
   --bs-primary-text: #0a58ca;
   --bs-secondary-text: #6c757d;
@@ -179,9 +186,9 @@ img.card-img-top {
   --bs-form-control-disabled-bg: var(--bs-secondary-bg);
   --bs-highlight-bg: #fff3cd;
   --bs-breakpoint-xs: 0;
-  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-sm: 550px;
   --bs-breakpoint-md: 768px;
-  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-lg: 800px;
   --bs-breakpoint-xl: 1200px;
   --bs-breakpoint-xxl: 1400px;
 }
@@ -280,7 +287,7 @@ img.card-img-top {
 
 .text-bg-light {
   color: #000 !important;
-  background-color: RGBA(249, 203, 252, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(255, 255, 255, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-dark {
@@ -331,10 +338,10 @@ img.card-img-top {
 }
 
 .link-light {
-  color: #F9CBFC !important;
+  color: #fff !important;
 }
 .link-light:hover, .link-light:focus {
-  color: #fad5fd !important;
+  color: white !important;
 }
 
 .link-dark {
@@ -407,7 +414,7 @@ img.card-img-top {
   z-index: 1020;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 550px) {
   .sticky-sm-top {
     position: -webkit-sticky;
     position: sticky;
@@ -435,7 +442,7 @@ img.card-img-top {
     z-index: 1020;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 800px) {
   .sticky-lg-top {
     position: -webkit-sticky;
     position: sticky;
@@ -994,6 +1001,22 @@ img.card-img-top {
 
 .min-vw-100 {
   min-width: 100vw !important;
+}
+
+.h-5 {
+  height: 5% !important;
+}
+
+.h-10 {
+  height: 10% !important;
+}
+
+.h-15 {
+  height: 15% !important;
+}
+
+.h-20 {
+  height: 20% !important;
 }
 
 .h-25 {
@@ -2338,7 +2361,7 @@ img.card-img-top {
   z-index: 3 !important;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 550px) {
   .float-sm-start {
     float: left !important;
   }
@@ -3454,7 +3477,7 @@ img.card-img-top {
     text-align: center !important;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 800px) {
   .float-lg-start {
     float: left !important;
   }
